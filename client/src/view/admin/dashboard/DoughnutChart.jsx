@@ -21,13 +21,15 @@ export const DoughnutChart = ({ data = [] }) => {
           }),
           backgroundColor: [
             themeColor.primary,
-            documentStyle.getPropertyValue('--orange-500'),
-            documentStyle.getPropertyValue('--red-500')
+            documentStyle.getPropertyValue('--orange-400'),
+            documentStyle.getPropertyValue('--red-400'),
+            documentStyle.getPropertyValue('--green-400'),
           ],
           hoverBackgroundColor: [
             themeColor.primary,
-            documentStyle.getPropertyValue('--orange-400'),
-            documentStyle.getPropertyValue('--red-400')
+            documentStyle.getPropertyValue('--orange-300'),
+            documentStyle.getPropertyValue('--red-300'),
+            documentStyle.getPropertyValue('--green-300')
           ]
         }
       ]
@@ -42,7 +44,7 @@ export const DoughnutChart = ({ data = [] }) => {
 
   return (
     <Cardz className="w-full flex flex-col justify-center items-center py-8">
-      <h2 className="font-bold uppercase leading-normal mb-4 text-primary">Báo cáo số lượng nhân viên theo vai trò</h2>
+      <h2 className="font-bold uppercase leading-normal mb-4 text-primary">Báo cáo nhân viên theo vai trò</h2>
       <div className="relative">
         <Chart type="doughnut" data={chartData} options={chartOptions} className="w-[20rem]" />
         {data?.length === 0 && (

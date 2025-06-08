@@ -21,15 +21,15 @@ export const PieChart = ({ data = [] }) => {
           }),
           backgroundColor: [
             themeColor.primary,
-            documentStyle.getPropertyValue('--green-500'),
-            documentStyle.getPropertyValue('--orange-500'),
-            documentStyle.getPropertyValue('--red-500')
-          ],
-          hoverBackgroundColor: [
-            themeColor.primary,
             documentStyle.getPropertyValue('--green-400'),
             documentStyle.getPropertyValue('--orange-400'),
             documentStyle.getPropertyValue('--red-400')
+          ],
+          hoverBackgroundColor: [
+            themeColor.primary,
+            documentStyle.getPropertyValue('--green-300'),
+            documentStyle.getPropertyValue('--orange-300'),
+            documentStyle.getPropertyValue('--red-300')
           ]
         }
       ]

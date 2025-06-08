@@ -2,20 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 import { formatDate } from '@lib/helper';
 import { Cardz } from '@components/core';
-import { themeColor } from '@theme';
 
-export const ComboChart = ({ data = [], isLoading }) => {
+export const ComboChart = ({ data = [], categories }) => {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     const documentStyle = getComputedStyle(document.documentElement);
+    const arr = [
+      documentStyle.getPropertyValue('--orange-500'),
+      documentStyle.getPropertyValue('--red-500'),
+      documentStyle.getPropertyValue('--blue-500'),
+      documentStyle.getPropertyValue('--green-500')
+    ];
     const textColor = documentStyle.getPropertyValue('--text-color');
     const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
     const dataz = {
-      labels: [],
-      datasets: []
+      labels: data.map((d) => formatDate(d.date, 'date')),
+      datasets: categories?.map((c, index) => ({
+        type: 'line',
+        label: c.name,
+        borderColor: arr[index],
+        borderWidth: 2,
+        fill: false,
+        tension: 0.4,
+        data: data.map((d) => d[c._id] || 0)
+      }))
     };
     const options = {
       maintainAspectRatio: false,

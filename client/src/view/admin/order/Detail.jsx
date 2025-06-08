@@ -58,7 +58,13 @@ export const DetailOrder = () => {
   }, [prices]);
 
   const handleData = (data) => {
-    const newData = { ...data, items: prices };
+    const newData = {
+      ...data,
+      items: prices,
+      detail: { nguyen_xe: data.nguyen_xe, loai_xe: data.loai_xe },
+      nguyen_xe: undefined,
+      loai_xe: undefined
+    };
     if (prices.length === 0) return 'Vui lòng thêm sản phẩm!';
     if (isUpdate) return { ...checkEqualProp(newData, item), _id };
     else return newData;
@@ -111,6 +117,8 @@ export const DetailOrder = () => {
           disabled
           helper={watch('totalAmount') ? convertNumberToString(watch('totalAmount')) : ''}
         />
+        <InputFormz id="nguyen_xe" label="Nguyên xe" value={watch('nguyen_xe')} errors={errors} register={register} />
+        <InputFormz id="loai_xe" label="Loại xe" value={watch('loai_xe')} errors={errors} register={register} />
         <TextAreaz id="note" label="Ghi chú" value={watch('note')} errors={errors} register={register} />
       </div>
     </FormDetail>
