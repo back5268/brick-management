@@ -1,0 +1,189 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+@import './theme.css';
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer components {
+  .card {
+    @apply rounded-md p-4 border-[1px] border-border;
+  }
+}
+
+:root {
+  --primary-color: #0891b2;
+  --border-color: rgba(176, 190, 197, 1);
+  --background-color: rgb(222, 227, 235);
+  --secondary-color: rgb(82, 96, 112);
+  --text-color: rgba(47, 43, 61, 0.9);
+}
+
+/* :root {
+  --blue-50: rgb(243.9, 249.75, 254.4);
+  --blue-100: rgb(201.72, 229.8, 252.12);
+  --blue-200: rgb(159.54, 209.85, 249.84);
+  --blue-300: rgb(117.36, 189.9, 247.56);
+  --blue-400: rgb(75.18, 169.95, 245.28);
+  --blue-500: #2196f3;
+  --blue-600: rgb(28.05, 127.5, 206.55);
+  --blue-700: rgb(23.1, 105, 170.1);
+  --blue-800: rgb(18.15, 82.5, 133.65);
+  --blue-900: rgb(13.2, 60, 97.2);
+  --green-50: rgb(247.45, 250.2, 245.05);
+  --green-100: rgb(218.76, 231.96, 207.24);
+  --green-200: rgb(190.07, 213.72, 169.43);
+  --green-300: rgb(161.38, 195.48, 131.62);
+  --green-400: rgb(132.69, 177.24, 93.81);
+  --green-500: #689f38;
+  --green-600: rgb(88.4, 135.15, 47.6);
+  --green-700: rgb(72.8, 111.3, 39.2);
+  --green-800: rgb(57.2, 87.45, 30.8);
+  --green-900: rgb(41.6, 63.6, 22.4);
+  --yellow-50: rgb(254.8, 251.85, 244.5);
+  --yellow-100: rgb(254.04, 239.88, 204.6);
+  --yellow-200: rgb(253.28, 227.91, 164.7);
+  --yellow-300: rgb(252.52, 215.94, 124.8);
+  --yellow-400: rgb(251.76, 203.97, 84.9);
+  --yellow-500: #fbc02d;
+  --yellow-600: rgb(213.35, 163.2, 38.25);
+  --yellow-700: rgb(175.7, 134.4, 31.5);
+  --yellow-800: rgb(138.05, 105.6, 24.75);
+  --yellow-900: rgb(100.4, 76.8, 18);
+  --cyan-50: rgb(242.25, 251.65, 252.85);
+  --cyan-100: rgb(193.8, 238.92, 244.68);
+  --cyan-200: rgb(145.35, 226.19, 236.51);
+  --cyan-300: rgb(96.9, 213.46, 228.34);
+  --cyan-400: rgb(48.45, 200.73, 220.17);
+  --cyan-500: #00bcd4;
+  --cyan-600: rgb(0, 159.8, 180.2);
+  --cyan-700: rgb(0, 131.6, 148.4);
+  --cyan-800: rgb(0, 103.4, 116.6);
+  --cyan-900: rgb(0, 75.2, 84.8);
+  --pink-50: rgb(253.9, 243.75, 247.2);
+  --pink-100: rgb(249.72, 201, 217.56);
+  --pink-200: rgb(245.54, 158.25, 187.92);
+  --pink-300: rgb(241.36, 115.5, 158.28);
+  --pink-400: rgb(237.18, 72.75, 128.64);
+  --pink-500: #e91e63;
+  --pink-600: rgb(198.05, 25.5, 84.15);
+  --pink-700: rgb(163.1, 21, 69.3);
+  --pink-800: rgb(128.15, 16.5, 54.45);
+  --pink-900: rgb(93.2, 12, 39.6);
+  --indigo-50: rgb(246.15, 247, 251.6);
+  --indigo-100: rgb(212.52, 216.6, 238.68);
+  --indigo-200: rgb(178.89, 186.2, 225.76);
+  --indigo-300: rgb(145.26, 155.8, 212.84);
+  --indigo-400: rgb(111.63, 125.4, 199.92);
+  --indigo-500: #4e5fbb;
+  --indigo-600: rgb(66.3, 80.75, 158.95);
+  --indigo-700: rgb(54.6, 66.5, 130.9);
+  --indigo-800: rgb(42.9, 52.25, 102.85);
+  --indigo-900: rgb(31.2, 38, 74.8);
+  --teal-50: rgb(242.25, 249.75, 249.05);
+  --teal-100: rgb(193.8, 229.8, 226.44);
+  --teal-200: rgb(145.35, 209.85, 203.83);
+  --teal-300: rgb(96.9, 189.9, 181.22);
+  --teal-400: rgb(48.45, 169.95, 158.61);
+  --teal-500: #009688;
+  --teal-600: rgb(0, 127.5, 115.6);
+  --teal-700: rgb(0, 105, 95.2);
+  --teal-800: rgb(0, 82.5, 74.8);
+  --teal-900: rgb(0, 60, 54.4);
+  --orange-50: rgb(255, 249.85, 242.25);
+  --orange-100: rgb(255, 230.28, 193.8);
+  --orange-200: rgb(255, 210.71, 145.35);
+  --orange-300: rgb(255, 191.14, 96.9);
+  --orange-400: rgb(255, 171.57, 48.45);
+  --orange-500: #ff9800;
+  --orange-600: rgb(216.75, 129.2, 0);
+  --orange-700: rgb(178.5, 106.4, 0);
+  --orange-800: rgb(140.25, 83.6, 0);
+  --orange-900: rgb(102, 60.8, 0);
+  --bluegray-50: rgb(247.05, 248.5, 249.2);
+  --bluegray-100: rgb(216.84, 223.8, 227.16);
+  --bluegray-200: rgb(186.63, 199.1, 205.12);
+  --bluegray-300: rgb(156.42, 174.4, 183.08);
+  --bluegray-400: rgb(126.21, 149.7, 161.04);
+  --bluegray-500: #607d8b;
+  --bluegray-600: rgb(81.6, 106.25, 118.15);
+  --bluegray-700: rgb(67.2, 87.5, 97.3);
+  --bluegray-800: rgb(52.8, 68.75, 76.45);
+  --bluegray-900: rgb(38.4, 50, 55.6);
+  --purple-50: rgb(250.05, 244.2, 251.05);
+  --purple-100: rgb(231.24, 203.16, 236.04);
+  --purple-200: rgb(212.43, 162.12, 221.03);
+  --purple-300: rgb(193.62, 121.08, 206.02);
+  --purple-400: rgb(174.81, 80.04, 191.01);
+  --purple-500: #9c27b0;
+  --purple-600: rgb(132.6, 33.15, 149.6);
+  --purple-700: rgb(109.2, 27.3, 123.2);
+  --purple-800: rgb(85.8, 21.45, 96.8);
+  --purple-900: rgb(62.4, 15.6, 70.4);
+  --red-50: rgb(254.45, 245.6, 244.95);
+  --red-100: rgb(252.36, 209.88, 206.76);
+  --red-200: rgb(250.27, 174.16, 168.57);
+  --red-300: rgb(248.18, 138.44, 130.38);
+  --red-400: rgb(246.09, 102.72, 92.19);
+  --red-500: #f44336;
+  --red-600: rgb(207.4, 56.95, 45.9);
+  --red-700: rgb(170.8, 46.9, 37.8);
+  --red-800: rgb(134.2, 36.85, 29.7);
+  --red-900: rgb(97.6, 26.8, 21.6);
+  --primary-50: rgb(243.6, 248, 251.2);
+  --primary-100: rgb(200.28, 221.4, 236.76);
+  --primary-200: rgb(156.96, 194.8, 222.32);
+  --primary-300: rgb(113.64, 168.2, 207.88);
+  --primary-400: rgb(70.32, 141.6, 193.44);
+  --primary-500: #1b73b3;
+  --primary-600: rgb(22.95, 97.75, 152.15);
+  --primary-700: rgb(18.9, 80.5, 125.3);
+  --primary-800: rgb(14.85, 63.25, 98.45);
+  --primary-900: rgb(10.8, 46, 71.6);
+} */
+
+body {
+  color: rgba(47, 43, 61, 0.9);
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+}
+
+.menu-transition-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.menu-transition-enter-active {
+  max-height: 300px;
+  opacity: 1;
+  transition: max-height 300ms ease, opacity 300ms ease, transform 300ms ease;
+}
+
+.menu-transition-exit {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-transition-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 300ms ease, opacity 300ms ease, transform 300ms ease;
+}
+
+hr {
+  border-color: var(--border-color);
+}

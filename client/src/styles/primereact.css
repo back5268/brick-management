@@ -1,0 +1,105 @@
+.p-datatable .p-column-header-content {
+    justify-content: center;
+}
+
+.p-accordion-header-link {
+    background-color: var(--background-color);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.p-accordion-content {
+    padding-bottom: 2rem;
+}
+
+.p-datatable-wrapper {
+    font-size: 0.875rem;
+}
+
+.p-float-label {
+    font-size: 0.875rem;
+}
+
+.p-datatable-tbody tr td {
+    padding: 0.5rem;
+}
+
+.p-datatable-tbody td {
+    text-align: center;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+    border-radius: 0.25rem;
+}
+
+.p-timeline-event-opposite {
+    width: fit-content;
+}
+
+.p-timeline-event-marker {
+    background: var(--primary-color);
+}
+
+.p-timeline-event-connector {
+    background: var(--primary-color);
+}
+
+.p-tag-warning,
+.p-button-warning {
+    color: white !important;
+}
+
+.disabledz .p-disabled {
+    background-color: var(--background-color);
+    opacity: 100;
+}
+
+.p-dropdown,
+.p-inputtext,
+.p-multiselect,
+.p-calendar {
+    border-color: var(--border-color);
+}
+
+.p-calendar .p-button {
+    background-color: var(--primary-color);
+}
+
+hr {
+    border-color: var(--border-color);
+}
+
+.p-datatable-header,
+.p-datatable-thead th {
+    background-color: var(--background-color);
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.p-datatable .p-datatable-tbody>tr>td,
+.p-datatable .p-datatable-thead>tr>th,
+.p-datatable-header,
+.p-paginator {
+    color: rgba(47, 43, 61, 0.9);
+    border-color: var(--border-color);
+    font-size: 0.875rem;
+}
+
+.p-tag-value {
+    font-weight: 300;
+    line-height: 2;
+}
+
+.p-dialog-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary-color)
+}
+
+.p-datatable-loading-overlay {
+    color: var(--primary-color);
+}
